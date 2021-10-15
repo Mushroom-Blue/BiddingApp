@@ -33,7 +33,9 @@ function localStorageSave() {
 
 function localStorageBringBack() {
     let bidData = JSON.parse(localStorage.getItem("bidsArray"));
-    bidArray = bidData;
+    if (bidData !== null) {
+        bidArray = bidData;
+    }
     render();
 }
 
