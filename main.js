@@ -9,7 +9,9 @@ function addOneBid(event) {
         bid: bidderBid,
     });
     document.getElementById("bidderOne").value = "";
+    console.log(bidArray);
     localStorageSave();
+    render();
 }
 
 function addTwoBid(event) {
@@ -22,6 +24,7 @@ function addTwoBid(event) {
     });
     document.getElementById("bidderTwo").value = "";
     localStorageSave();
+    render();
 }
 
 function localStorageSave() {
@@ -29,7 +32,22 @@ function localStorageSave() {
 }
 
 function localStorageBringBack() {
-    JSON.parse(localStorage.getItem("bidsArray"));
+    let bidData = JSON.parse(localStorage.getItem("bidsArray"));
+    bidArray = bidData;
+    render();
 }
+
+function render() {
+    let bidHTML = "";
+    bidArray.forEach(bid => {
+        bidHTML += `
+            <div class="eachBid">
+                <div class="bidderName">${bid.bidderName}</div>
+                <div class="bidderBid">$${bid.bid}</div>
+            </div>
+        `
+    });
+    document.getElementById("allBids").innerHTML = bidHTML;
+};
 
 localStorageBringBack();
