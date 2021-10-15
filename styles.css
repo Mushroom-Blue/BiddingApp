@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #BD93D8;
+}
+
+.titleDiv {
+    font-size: 32px;
+    /* padding-bottom: 500px; */
+}
+
+.allBidsTitle {
+    font-size: 28px;
+}
+
+.inputContainer {
+    display: flex;
+}
