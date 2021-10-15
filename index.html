@@ -17,12 +17,12 @@
         </div>
         <div class="inputContainer">
             <div class="bidOne">
-                <input type="number" class="bidOneInput" id="bidderOne"/>
-                <button class="bidderOneButton" onclick="addOneBid()">Bid!</button>
+                <input type="number" class="bidOneInput" id="bidderOne" onkeydown="addOneBid(event)"/>
+                <button class="bidderOneButton" onclick="addOneBid(event)">Bid!</button>
             </div>
             <div class="bidTwo">
-                <input type="number" class="bidTwoInput" id="bidderTwo"/>
-                <button class="bidderTwoButton" onclick="addTwoBid()">Bid!</button>
+                <input type="number" class="bidTwoInput" id="bidderTwo" onkeydown="addTwoBid(event)"/>
+                <button class="bidderTwoButton" onclick="addTwoBid(event)">Bid!</button>
             </div>
         </div>
     </div>
